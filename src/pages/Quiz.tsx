@@ -25,7 +25,7 @@ const Quiz: React.FC = () => {
   };
 
   return (
-    <section id="quiz" className="py-16 px-4 bg-gray-50">
+    <section id="quiz" className="py-[6rem] px-4 bg-gray-50 min-h-max">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-primary text-center">Find Your Perfect Boba Tea</h1>
         <div className="md:text-xl text-lg flex justify-center items-center text-center mb-8">
