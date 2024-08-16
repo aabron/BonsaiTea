@@ -4,7 +4,18 @@
 @import url("https://use.typekit.net/xtv6xvg.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+.hero-slider .slick-slider, 
+.hero-slider .slick-list, 
+.hero-slider .slick-track,
+.hero-slider .slick-slide,
+.hero-slider .slick-slide > div {
+    height: 100%;
+}
 
+.hero-slider .slick-slide > div > div {
+    height: 100%;
+    width: 100%;
+}
 body {
   font-family: 'Montserrat', sans-serif;
 }

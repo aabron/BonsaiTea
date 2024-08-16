@@ -4,13 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'montserrat': ['Montserrat', 'sans-serif'],
-      'proxima': ['Proxima Nova Regular', 'sans-serif'],
-    },
     extend: {
       colors: {
-        'primary': '#036635',
+        primary: '#036635',
+        secondary: '#D4AF37',
+        cream: '#F5E6D3',
+        accent: '#E8C1C5',
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Lato', 'sans-serif'],
       },
     },
   },

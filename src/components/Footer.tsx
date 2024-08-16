@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <p className="text-lg font-semibold">Bonsai Tea</p>
-          <p>123 Park Avenue, Winter Park, FL 32789</p>
+          <p>519 S Park Ave, Winter Park, FL 32789</p>
           <p>Phone: (407) 555-0123</p>
         </div>
         

@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
           <h2 className="text-2xl font-semibold text-primary mb-4">Visit us at our Winter Park location:</h2>
           
           <address className="not-italic mb-6">
-            <p className="mb-2">123 Park Avenue</p>
+            <p className="mb-2">519 S Park Ave</p>
             <p className="mb-2">Winter Park, FL 32789</p>
             <p className="mb-2">
               <span className="font-semibold">Phone:</span> (407) 555-0123
