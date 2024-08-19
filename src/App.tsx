@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Quiz from './pages/Quiz';
 import Footer from './components/Footer';
 
+
 function App() {
   const [fadeIn, setFadeIn] = useState(false);
 
@@ -16,9 +17,10 @@ function App() {
   }, []);
 
   return (
+    
     <div className={`transition-opacity duration-[1500ms]  ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-      <Header />
       <Router>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
@@ -26,8 +28,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
-      </Router>
+      
       <Footer />
+      </Router>
     </div>
   );
 }
