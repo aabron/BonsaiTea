@@ -16,7 +16,7 @@ interface DrinkInfo {
 const featuredDrinks: DrinkInfo[] = [
   {
     name: "Bonsai Black",
-    image: "/images/bonsai-black.jpg",
+    image: "/images/Bonsai-Black.jpg",
     description: "Passion Fruit, Pineapple, Strawberry, Lemon, Jasmine",
     tea: "Black Tea",
     sugar: "50% sweetness",
@@ -24,7 +24,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: "Yucha Green",
-    image: "/images/yucha-green.png",
+    image: "/images/Yucha-Green.png",
     description: "Yuzu, Green Tea, Lemon, Honey",
     tea: "Green Tea",
     sugar: "30% sweetness",
@@ -32,14 +32,14 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: "Passion Burst",
-    image: "/images/passion-burst.png",
+    image: "/images/Passion-Burst.png",
     description: "Passion Fruit, Lemon, Jasmine",
     tea: "Jasmine Tea",
     sugar: "25% sweetness",
     flavor: "Tangy, Floral, Refreshing"
   },{
     name: "Bonsai ",
-    image: "/images/bonsai-black.jpg",
+    image: "/images/Bonsai-Black.jpg",
     description: "Passion Fruit, Pineapple, Strawberry, Lemon, Jasmine",
     tea: "Black Tea",
     sugar: "50% sweetness",
@@ -47,7 +47,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: "Yucha ",
-    image: "/images/yucha-green.png",
+    image: "/images/Yucha-Green.png",
     description: "Yuzu, Green Tea, Lemon, Honey",
     tea: "Green Tea",
     sugar: "30% sweetness",
@@ -55,7 +55,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: "Passion ",
-    image: "/images/passion-burst.png",
+    image: "/images/Passion-Burst.png",
     description: "Passion Fruit, Lemon, Jasmine",
     tea: "Jasmine Tea",
     sugar: "25% sweetness",
@@ -63,7 +63,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: " Black",
-    image: "/images/bonsai-black.jpg",
+    image: "/images/Bonsai-Black.jpg",
     description: "Passion Fruit, Pineapple, Strawberry, Lemon, Jasmine",
     tea: "Black Tea",
     sugar: "50% sweetness",
@@ -71,7 +71,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: " Green",
-    image: "/images/yucha-green.png",
+    image: "/images/Yucha-Green.png",
     description: "Yuzu, Green Tea, Lemon, Honey",
     tea: "Green Tea",
     sugar: "30% sweetness",
@@ -79,7 +79,7 @@ const featuredDrinks: DrinkInfo[] = [
   },
   {
     name: " Burst",
-    image: "/images/passion-burst.png",
+    image: "/images/Passion-Burst.png",
     description: "Passion Fruit, Lemon, Jasmine",
     tea: "Jasmine Tea",
     sugar: "25% sweetness",
