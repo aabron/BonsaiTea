@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { questions, recommendations, Question, Recommendation } from '../utils/arrays';
+import { questions, recommendations, Question, Recommendation, drinkCategories, DrinkInfo } from '../utils/arrays';
 
 const Quiz: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [showResult, setShowResult] = useState<boolean>(false);
-  const [result, setResult] = useState<Recommendation | null>(null);
+  const [result, setResult] = useState<DrinkInfo | null>(null);
+  const [hoveredDrink, setHoveredDrink] = useState<string | null>(null);
 
   const handleAnswer = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      // For simplicity, we're just choosing a random recommendation
-      // In a real app, you'd use the answers to determine the best recommendation
-      const randomIndex = Math.floor(Math.random() * recommendations.length);
-      setResult(recommendations[randomIndex]);
+      const randomIndex = Math.floor(Math.random() * drinkCategories["Signature Tea"].length);
+      setResult(drinkCategories["Signature Tea"][randomIndex]);
       setShowResult(true);
     }
   };
@@ -25,39 +24,62 @@ const Quiz: React.FC = () => {
   };
 
   return (
-    <section id="quiz" className="py-[6rem] px-4 bg-gray-50 min-h-max">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold text-primary text-center">Find Your Perfect Boba Tea</h1>
+    <section id="quiz" className="py-[6rem] px-4 bg-gray-50 min-h-[90vh]">
+      <div className="max-w-2xl mx-auto mt-12">
+        <h1 className="text-3xl font-bold text-primary text-center">Find Your Perfect Surprise Tea</h1>
         <div className="md:text-xl text-lg flex justify-center items-center text-center mb-8">
           <div className="w-1/2">
-            <p>Use our quiz to find out what kind of boba tea is best for you.</p>
+            <p>Get a random tea from the menu for you to try!</p>
           </div>
         </div>
         {!showResult ? (
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-4">{questions[currentQuestion].question}</h2>
-            <div className="space-y-4">
-              {questions[currentQuestion].answers.map((answer, index) => (
+
                 <button
-                  key={index}
                   onClick={handleAnswer}
                   className="w-full py-2 px-4 bg-primary text-white rounded hover:bg-green-700 transition duration-300"
                 >
-                  {answer}
+                  Get Tea
                 </button>
-              ))}
-            </div>
-          </div>
+
         ) : (
-          <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <h2 className="text-2xl font-semibold text-primary mb-4">Your Recommended Drink:</h2>
-            <p className="text-xl mb-2">{result?.name}</p>
-            <p className="text-gray-600 mb-6">{result?.description}</p>
+          <div className=" p-6 rounded-lg shadow-md text-center ">
+            <div
+                    key={result?.name}
+                    className="text-center relative"
+                    onMouseEnter={() => setHoveredDrink(result?.name || "")}
+                    onMouseLeave={() => setHoveredDrink(null)}
+                  >
+                    <div className="bg-cream p-4 rounded-lg shadow-lg relative">
+                      <div
+                        className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === result?.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
+                          }`}
+                        style={{
+                          maxWidth: '100%',
+                          width: '250px',
+                          left: '50%',
+                          transform: hoveredDrink === result?.name ? 'translateX(-50%) translateY(100%)' : 'translateX(-50%) translateY(10px)',
+                        }}
+                      >
+                        <h4 className="font-bold mb-2">{result?.name}</h4>
+                        <p><strong>Tea:</strong> {result?.tea}</p>
+                        <p><strong>Sugar:</strong> {result?.sugar}</p>
+                        <p><strong>Flavor Profile:</strong> {result?.flavor}</p>
+                        <p><strong>Price:</strong> {result?.price}</p>
+                      </div>
+                      <img
+                        src={result?.image}
+                        alt={result?.name}
+                        className="w-full h-64 object-cover rounded-lg mb-4"
+                      />
+                      <h3 className="text-xl font-bold text-primary mb-2">{result?.name}</h3>
+                      <p className="text-primary">{result?.description}</p>
+                    </div>
+                  </div>
             <button
               onClick={restartQuiz}
-              className="py-2 px-4 bg-primary text-white rounded hover:bg-green-700 transition duration-300"
+              className=" mt-10 py-2 px-4 bg-primary text-white rounded hover:bg-green-700 transition duration-300"
             >
-              Retake Quiz
+              Get Another Tea
             </button>
           </div>
         )}

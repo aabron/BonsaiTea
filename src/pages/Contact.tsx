@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Contact: React.FC = () => {
   return (
@@ -38,9 +39,9 @@ const Contact: React.FC = () => {
               For the latest updates and behind-the-scenes content, follow us on social media:
             </p>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="text-primary hover:underline">Facebook</a>
-              <a href="#" className="text-primary hover:underline">Instagram</a>
-              <a href="#" className="text-primary hover:underline">Twitter</a>
+            <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaFacebook className='mr-2' />Facebook</a>
+            <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaInstagram className='mr-2' />Instagram</a>
+            <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaTwitter className='mr-2' />Twitter</a>
             </div>
           </div>
         </div>
