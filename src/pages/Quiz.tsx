@@ -69,7 +69,7 @@ const Quiz: React.FC = () => {
                       <img
                         src={result?.image}
                         alt={result?.name}
-                        className="w-full h-64 object-cover rounded-lg mb-4"
+                        className="w-full h-max object-cover rounded-lg mb-4"
                       />
                       <h3 className="text-xl font-bold text-primary mb-2">{result?.name}</h3>
                       <p className="text-primary">{result?.description}</p>
