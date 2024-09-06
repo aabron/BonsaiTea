@@ -358,7 +358,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                 ))}
-                <div className="bg-black bg-opacity-70 p-8 rounded-lg z-20 mx-12">
+                <div className="bg-black bg-opacity-70 p-8 rounded-lg z-20 mx-12 md:mt-0 mt-8">
                   <h1 className="md:text-5xl text-2xl text-cream mb-4">Welcome to Bonsai Tea</h1>
                   <p className="md:text-2xl text-lg text-cream">Discover the art of tea in Winter Park, Florida</p>
                 </div>
