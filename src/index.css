@@ -45,6 +45,10 @@ body {
   .fade-out-tea {
 	animation: fadeOutTea 0.5s forwards;
   }
+
+  .fade-out-about {
+	animation: fadeOutAbout 0.5s forwards;
+  }
   
   /* .fade-in {
 	animation: fadeIn 0.5s forwards;
@@ -72,7 +76,18 @@ body {
 	opacity: 1;
 	}
   }
-  
+
+  @keyframes fadeOutAbout {
+	0% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	opacity: 1;
+	}
+}
   /* @keyframes fadeIn {
 	0% {
 	  opacity: 0;

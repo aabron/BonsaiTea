@@ -2,11 +2,11 @@ import React from 'react';
 
 const AboutUs: React.FC = () => {
     return (
-        <section id="about" className="py-16 px-4">
+        <section id="about" className="py-16 px-4 bg-cream">
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-primary mb-8 text-center">About Bonsai Tea</h1>
                 <img
-                    src="/images/team-photo.jpg"
+                    src="/images/bonsaiImages/FullSizeRender.jpg"
                     alt="Bonsai Tea Team"
                     className="w-full h-auto rounded-lg mb-8 shadow-lg"
                 />

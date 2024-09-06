@@ -24,7 +24,7 @@ const Quiz: React.FC = () => {
   };
 
   return (
-    <section id="quiz" className="py-[6rem] px-4 bg-gray-50 min-h-[90vh]">
+    <section id="quiz" className="py-[6rem] px-4 bg-cream min-h-[90vh]">
       <div className="max-w-2xl mx-auto mt-12">
         <h1 className="text-3xl font-bold text-primary text-center">Find Your Perfect Surprise Tea</h1>
         <div className="md:text-xl text-lg flex justify-center items-center text-center mb-8">
@@ -42,14 +42,14 @@ const Quiz: React.FC = () => {
                 </button>
 
         ) : (
-          <div className=" p-6 rounded-lg shadow-md text-center ">
+          <div className=" p-6 rounded-lg text-center ">
             <div
                     key={result?.name}
                     className="text-center relative"
                     onMouseEnter={() => setHoveredDrink(result?.name || "")}
                     onMouseLeave={() => setHoveredDrink(null)}
                   >
-                    <div className="bg-cream p-4 rounded-lg shadow-lg relative">
+                    <div className="bg-cream p-4 rounded-lg shadow-lg relative border-black">
                       <div
                         className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === result?.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                           }`}
@@ -76,7 +76,7 @@ const Quiz: React.FC = () => {
                     </div>
                   </div>
             <button
-              onClick={restartQuiz}
+              onClick={handleAnswer}
               className=" mt-10 py-2 px-4 bg-primary text-white rounded hover:bg-green-700 transition duration-300"
             >
               Get Another Tea

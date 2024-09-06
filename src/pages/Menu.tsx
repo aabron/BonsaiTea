@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
   }
 
   return (
-    <section id="menu" className="py-16 px-4 bg-gray-50">
+    <section id="menu" className="py-16 px-4 bg-cream">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <h1 className="text-3xl font-bold text-primary mt-16">Our Menu</h1>
         <h1 className="text-xl font-bold text-primary mt-5">Hover Over or click a drink to see more information</h1>
@@ -50,9 +50,9 @@ const Menu: React.FC = () => {
                     onMouseEnter={() => setHoveredDrink(drink.name)}
                     onMouseLeave={() => setHoveredDrink(null)}
                   >
-                    <div className="bg-cream p-4 rounded-lg shadow-lg relative">
+                    <div className="bg-cream p-4 rounded-lg shadow-xl relative h-[400px] border-2 border-black">
                       <div
-                        className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
+                        className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50  ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                           }`}
                         style={{
                           maxWidth: '100%',
