@@ -200,13 +200,13 @@ const Home: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [currentAboutPage, setCurrentAboutPage] = useState(0);
-  const questionsPerPage = isMobile ? 2 : 3;
+  const questionsPerPage = isMobile ? 1 : 3;
   const totalPages = Math.ceil(featuredDrinks.length / questionsPerPage);
   const validCurrentPage = Math.min(Math.max(currentPage, 0), totalPages - 1);
   const startIndex = validCurrentPage * questionsPerPage;
   const endIndex = startIndex + questionsPerPage;
   const [currentTeaPage, setCurrentTeaPage] = useState(0);
-  const questionsPerTeaPage = isMobile ? 2 : 3;
+  const questionsPerTeaPage = isMobile ? 1 : 3;
   const totalTeaPages = Math.ceil(teaBlends.length / questionsPerTeaPage);
   const validCurrentTeaPage = Math.min(Math.max(currentTeaPage, 0), totalTeaPages - 1);
   const teaStartIndex = validCurrentTeaPage * questionsPerTeaPage;
@@ -343,7 +343,7 @@ const Home: React.FC = () => {
         pluginWrapper={pluginWrapper}
         render={({ state, fullpageApi }) => (
           <ReactFullpage.Wrapper>
-            <div className="section bg-cream -z-20" data-percentage={isMobile ? "45" : "59"}>
+            <div className="section bg-cream -z-20" data-percentage={isMobile ? "50" : "59"}>
               <div className='w-full mx-auto flex justify-center items-center'>
                 {headerImages.map((image, index) => (
                   <div
@@ -403,11 +403,11 @@ const Home: React.FC = () => {
                 </div>
                 <button className="mr-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextPage}> {" > "} </button>
               </div>
-              <div className="flex justify-center items-center mt-4">
+              {!isMobile && <div className="flex justify-center items-center mt-4">
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentPage === 0 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
-              </div>
+              </div>}
               <div className='flex justify-between items-center md:mt-12 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
@@ -461,11 +461,11 @@ const Home: React.FC = () => {
                 </div>
                 <button className="mr-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextTeaPage}> {" > "} </button>
               </div>
-              <div className="flex justify-center items-center mt-4">
+              {!isMobile && <div className="flex justify-center items-center mt-4">
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 0 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
-              </div>
+              </div>}
               <div className='flex justify-between items-center md:mt-12 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
@@ -487,7 +487,7 @@ const Home: React.FC = () => {
                 <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
                 {currentAboutSections.map((section) => (
                   section.title === "Our Story" ? (
-                    <div key={section.title} className={`md:space-y-6 space-y-2 text-cream md:text-[16px] text-[10px] ${animationClassAbout}`}>
+                    <div key={section.title} className={`md:space-y-5 space-y-1 text-cream md:text-[16px] text-[8px] ${animationClassAbout}`}>
                       <h1 className="md:text-3xl text-lg font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
                       <p>
                         In 2022, Bonsai Tea began as a small dream shared by a group of friends who wanted to bring the artistry and tranquility of bonsai to the world of tea. Like the careful pruning and nurturing of a bonsai tree, we started small, tending to every detail with patience and love.
@@ -529,17 +529,17 @@ const Home: React.FC = () => {
             </div>
             <div className="section  ">
               <div className="max-w-4xl mx-auto mt-12">
-                <h1 className="md:text-3xl text-xl font-bold text-cream text-left p-2">Contact Us</h1>
+                <h1 className="md:text-3xl text-lg font-bold text-cream text-left p-2">Contact Us</h1>
 
                 <div className=" p-2 rounded-lg">
 
 
-                  <address className="not-italic mb-1 grid grid-cols-2 gap-x-4 md:gap-x-0">
+                  <address className="not-italic mb-1 grid grid-cols-2 gap-x-2 md:gap-x-0">
                     <div className='flex flex-col justify-center'>
-                      <h2 className="md:text-2xl text-lg font-semibold text-cream mb-4 mr-4">Visit us at our Winter Park location:</h2>
-                      <p className="mb-2 md:text-lg text-sm">519 S Park Ave</p>
-                      <p className="mb-2 md:text-lg text-sm">Winter Park, FL 32789</p>
-                      <p className="mb-2 md:text-lg text-sm">
+                      <h2 className="md:text-2xl text-sm font-semibold text-cream md:mb-4 mr-4">Visit us at our Winter Park location:</h2>
+                      <p className="md:mb-2 md:text-lg text-sm">519 S Park Ave</p>
+                      <p className="md:mb-2 md:text-lg text-sm">Winter Park, FL 32789</p>
+                      <p className="md:mb-2 md:text-lg text-sm">
                         <span className="font-semibold md:text-lg text-sm">Phone:</span> (407) 555-0123
                       </p>
                       <p>
@@ -547,7 +547,7 @@ const Home: React.FC = () => {
                       </p>
                     </div>
                     {isMobile ? (
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="210" height="190" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="190" height="170" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     ) : (
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="300" height="250" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     )}
@@ -555,17 +555,17 @@ const Home: React.FC = () => {
 
                   </address>
                   <div className="mt-1">
-                    <h3 className="md:text-xl text-lg font-semibold text-cream mb-4">Hours of Operation</h3>
-                    <ul className="space-y-2">
-                      <li><span className="font-semibold md:text-lg text-sm">Monday - Friday:</span> 8:00 AM - 9:00 PM</li>
-                      <li><span className="font-semibold md:text-lg text-sm">Saturday:</span> 9:00 AM - 10:00 PM</li>
-                      <li><span className="font-semibold md:text-lg text-sm">Sunday:</span> 10:00 AM - 8:00 PM</li>
+                    <h3 className="md:text-xl text-sm font-semibold text-cream mb-4">Hours of Operation</h3>
+                    <ul className="md:space-y-2 space-y-0">
+                      <li className="md:text-lg text-xs"><span className="font-semibold md:text-lg text-xs">Monday - Friday:</span> 8:00 AM - 9:00 PM</li>
+                      <li className="md:text-lg text-xs"><span className="font-semibold md:text-lg text-xs">Saturday:</span> 9:00 AM - 10:00 PM</li>
+                      <li className="md:text-lg text-xs"><span className="font-semibold md:text-lg text-xs">Sunday:</span> 10:00 AM - 8:00 PM</li>
                     </ul>
                   </div>
 
                   <div className="mt-8">
                     <h3 className="md:text-xl text-lg font-semibold text-cream mb-4">Get in Touch</h3>
-                    <p className="mb-2 md:text-lg text-sm">
+                    <p className="mb-2 md:text-lg text-xs">
                       Have questions or feedback? We'd love to hear from you! Feel free to reach out via phone, email, or visit us in person.
                     </p>
                     <p>

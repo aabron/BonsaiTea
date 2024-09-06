@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             </div>
             <Link
                 to="https://www.grubhub.com/restaurant/bonsai-tea-519-s-park-ave-winter-park/7367424"
-                className="bg-primary text-white font-bold md:py-3 py-3 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
+                className="bg-primary text-white font-bold md:py-3 py-2 md:px-6 px-1 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
             >
                 Order Now
             </Link>
