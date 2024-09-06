@@ -36,7 +36,7 @@ const Menu: React.FC = () => {
                     onMouseEnter={() => setHoveredDrink(drink.name)}
                     onMouseLeave={() => setHoveredDrink(null)}
                   >
-                    <div className="bg-cream p-4 rounded-lg shadow-xl relative w-[130px] md:w-full md:h-[400px] h-[240px] border-2 border-black flex flex-col justify-center items-center">
+                    <div className="bg-cream p-4 rounded-lg shadow-xl relative w-[120px] md:w-full md:h-[400px] h-[240px] border-2 border-black flex flex-col justify-center items-center">
                       <div
                         className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50  ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                           }`}
@@ -58,8 +58,8 @@ const Menu: React.FC = () => {
                         alt={drink.name}
                         className="w-[80%] h-28 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-64"
                       />
-                      <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
-                      <p className="md:text-sm text-xs text-primary">{drink.description}</p>
+                      <h3 className="md:text-xl text-xs font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
+                      <p className="md:text-sm text-[11px] text-primary">{drink.description}</p>
                     </div>
                   </div>
                 ))}
