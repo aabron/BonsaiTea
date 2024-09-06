@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { isMobile } from 'react-device-detect';
 
 const pluginWrapper = () => {
   require('../statics/fullpage.offsetSections.min');
@@ -199,13 +200,13 @@ const Home: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [currentAboutPage, setCurrentAboutPage] = useState(0);
-  const questionsPerPage = 3;
+  const questionsPerPage = isMobile ? 2 : 3;
   const totalPages = Math.ceil(featuredDrinks.length / questionsPerPage);
   const validCurrentPage = Math.min(Math.max(currentPage, 0), totalPages - 1);
   const startIndex = validCurrentPage * questionsPerPage;
   const endIndex = startIndex + questionsPerPage;
   const [currentTeaPage, setCurrentTeaPage] = useState(0);
-  const questionsPerTeaPage = 3;
+  const questionsPerTeaPage = isMobile ? 2 : 3;
   const totalTeaPages = Math.ceil(teaBlends.length / questionsPerTeaPage);
   const validCurrentTeaPage = Math.min(Math.max(currentTeaPage, 0), totalTeaPages - 1);
   const teaStartIndex = validCurrentTeaPage * questionsPerTeaPage;
@@ -342,7 +343,7 @@ const Home: React.FC = () => {
         pluginWrapper={pluginWrapper}
         render={({ state, fullpageApi }) => (
           <ReactFullpage.Wrapper>
-            <div className="section bg-cream -z-20" data-percentage="59">
+            <div className="section bg-cream -z-20" data-percentage={isMobile ? "45" : "59"}>
               <div className='w-full mx-auto flex justify-center items-center'>
                 {headerImages.map((image, index) => (
                   <div
@@ -353,21 +354,21 @@ const Home: React.FC = () => {
                     <img
                       src={image}
                       alt={`Slide ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="md:w-full md:h-full object-cover w-full h-max"
                     />
                   </div>
                 ))}
                 <div className="bg-black bg-opacity-70 p-8 rounded-lg z-20 mx-12">
-                  <h1 className="text-5xl  text-cream mb-4">Welcome to Bonsai Tea</h1>
-                  <p className="text-2xl text-cream">Discover the art of tea in Winter Park, Florida</p>
+                  <h1 className="md:text-5xl text-2xl text-cream mb-4">Welcome to Bonsai Tea</h1>
+                  <p className="md:text-2xl text-lg text-cream">Discover the art of tea in Winter Park, Florida</p>
                 </div>
               </div>
             </div>
             <div className="section bg-cream">
-              <h2 className="text-4xl text-primary mb-8 flex flex-col items-center justify-center px-4">Featured Drinks</h2>
+              <h2 className="md:text-4xl text-2xl text-primary mb-2 flex flex-col items-center justify-center px-4">Featured Drinks</h2>
               <div className={`flex justify-center items-center`}>
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevPage}> {" < "} </button>
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ${animationClass}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto ${animationClass}`}>
 
                   {currentDrinks.map((drink) => (
                     <div
@@ -376,7 +377,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[350px] md:w-full h-[400px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[400px] h-[240px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -392,10 +393,10 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-64 object-cover rounded-lg mb-4"
+                          className="w-full h-28 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-64"
                         />
-                        <h3 className="text-xl font-bold text-primary mb-2">{drink.name}</h3>
-                        <p className="text-primary">{drink.description}</p>
+                        <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
+                        <p className="md:text-sm text-xs text-primary">{drink.description}</p>
                       </div>
                     </div>
                   ))}
@@ -407,23 +408,23 @@ const Home: React.FC = () => {
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>
-              <div className='flex justify-between items-center mt-12 px-32'>
+              <div className='flex justify-between items-center md:mt-12 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
-                  className="inline-block bg-primary text-cream font-bold py-3 px-6 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
+                  className="inline-block bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
                 >
                   View Full Menu
                 </Link>
                 <Link
                   to="https://www.grubhub.com/restaurant/bonsai-tea-519-s-park-ave-winter-park/7367424"
-                  className="bg-primary text-cream font-bold py-3 px-6 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
+                  className="bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
                 >
                   Order Now
                 </Link>
               </div>
             </div>
             <div className="section bg-cream">
-              <h2 className="text-4xl  text-primary mb-8 text-center">Tea Blends</h2>
+              <h2 className="md:text-4xl text-2xl  text-primary mb-2 text-center">Tea Blends</h2>
               <div className="flex justify-center items-center">
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
                 <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ${animationClassTea}`}>
@@ -434,7 +435,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[350px] md:w-full h-[400px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[400px] h-[240px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -450,10 +451,10 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-64 object-cover rounded-lg mb-4"
+                          className="w-full h-28 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-64"
                         />
-                        <h3 className="text-xl font-bold text-primary mb-2">{drink.name}</h3>
-                        <p className="text-primary">{drink.description}</p>
+                        <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
+                        <p className="md:text-sm text-sm text-primary">{drink.description}</p>
                       </div>
                     </div>
                   ))}
@@ -465,29 +466,29 @@ const Home: React.FC = () => {
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>
-              <div className='flex justify-between items-center mt-12 px-32'>
+              <div className='flex justify-between items-center md:mt-12 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
-                  className="inline-block bg-primary text-cream font-bold py-3 px-6 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
+                  className="inline-block bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
                 >
                   View Full Menu
                 </Link>
                 <Link
                   to="https://www.grubhub.com/restaurant/bonsai-tea-519-s-park-ave-winter-park/7367424"
-                  className="bg-primary text-cream font-bold py-3 px-6 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
+                  className="bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-lg"
                 >
                   Order Now
                 </Link>
               </div>
             </div>
-            <div className="section px-4">
+            <div className="section md:px-4 px-1">
               {/* <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1> */}
-              <div className="max-w-8xl mx-auto px-12 flex items-center justify-center -mb-1">
-                <button className="mr-10 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
+              <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1">
+                <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
                 {currentAboutSections.map((section) => (
                   section.title === "Our Story" ? (
-                    <div key={section.title} className={`space-y-6 text-cream ${animationClassAbout}`}>
-                      <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
+                    <div key={section.title} className={`md:space-y-6 space-y-2 text-cream md:text-[16px] text-[10px] ${animationClassAbout}`}>
+                      <h1 className="md:text-3xl text-lg font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
                       <p>
                         In 2022, Bonsai Tea began as a small dream shared by a group of friends who wanted to bring the artistry and tranquility of bonsai to the world of tea. Like the careful pruning and nurturing of a bonsai tree, we started small, tending to every detail with patience and love.
                       </p>
@@ -512,13 +513,13 @@ const Home: React.FC = () => {
                       </p>
                     </div>
                   ) : (
-                    <div className={`md:w-[50%] w-[70%] object-cover rounded-xl mb-2 ${animationClassAbout}`}>
+                    <div className={`md:w-[50%] w-[70%] object-cover  mb-2 ${animationClassAbout}`}>
                       <h1 className="text-3xl font-bold text-cream mb-2 text-center">{section.title}</h1>
-                      <img src={section.image} alt={section.title} />
+                      <img src={section.image} alt={section.title} className="rounded-lg " />
                     </div>
                   )
                 ))}
-                <button className="ml-10 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextAboutPage}> {" > "} </button>
+                <button className="md:ml-10 ml-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextAboutPage}> {" > "} </button>
               </div>
 
               <div className="flex justify-center items-center mt-4">
@@ -528,38 +529,43 @@ const Home: React.FC = () => {
             </div>
             <div className="section  ">
               <div className="max-w-4xl mx-auto mt-12">
-                <h1 className="text-3xl font-bold text-cream text-left">Contact Us</h1>
+                <h1 className="md:text-3xl text-xl font-bold text-cream text-left p-2">Contact Us</h1>
 
-                <div className=" p-1 rounded-lg">
+                <div className=" p-2 rounded-lg">
 
 
-                  <address className="not-italic mb-1 grid grid-cols-2">
+                  <address className="not-italic mb-1 grid grid-cols-2 gap-x-4 md:gap-x-0">
                     <div className='flex flex-col justify-center'>
-                      <h2 className="text-2xl font-semibold text-cream mb-4 mr-4">Visit us at our Winter Park location:</h2>
-                      <p className="mb-2">519 S Park Ave</p>
-                      <p className="mb-2">Winter Park, FL 32789</p>
-                      <p className="mb-2">
-                        <span className="font-semibold">Phone:</span> (407) 555-0123
+                      <h2 className="md:text-2xl text-lg font-semibold text-cream mb-4 mr-4">Visit us at our Winter Park location:</h2>
+                      <p className="mb-2 md:text-lg text-sm">519 S Park Ave</p>
+                      <p className="mb-2 md:text-lg text-sm">Winter Park, FL 32789</p>
+                      <p className="mb-2 md:text-lg text-sm">
+                        <span className="font-semibold md:text-lg text-sm">Phone:</span> (407) 555-0123
                       </p>
                       <p>
-                        <span className="font-semibold">Email:</span> <a href="mailto:info@bonsaitea.com" className="text-primary hover:underline">info@bonsaitea.com</a>
+                        <span className="font-semibold md:text-lg text-sm">Email:</span> <a href="mailto:info@bonsaitea.com" className="text-primary hover:underline">info@bonsaitea.com</a>
                       </p>
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="300" height="250" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    {isMobile ? (
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="210" height="190" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    ) : (
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="300" height="250" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    )}
+                    
 
                   </address>
                   <div className="mt-1">
-                    <h3 className="text-xl font-semibold text-cream mb-4">Hours of Operation</h3>
+                    <h3 className="md:text-xl text-lg font-semibold text-cream mb-4">Hours of Operation</h3>
                     <ul className="space-y-2">
-                      <li><span className="font-semibold">Monday - Friday:</span> 8:00 AM - 9:00 PM</li>
-                      <li><span className="font-semibold">Saturday:</span> 9:00 AM - 10:00 PM</li>
-                      <li><span className="font-semibold">Sunday:</span> 10:00 AM - 8:00 PM</li>
+                      <li><span className="font-semibold md:text-lg text-sm">Monday - Friday:</span> 8:00 AM - 9:00 PM</li>
+                      <li><span className="font-semibold md:text-lg text-sm">Saturday:</span> 9:00 AM - 10:00 PM</li>
+                      <li><span className="font-semibold md:text-lg text-sm">Sunday:</span> 10:00 AM - 8:00 PM</li>
                     </ul>
                   </div>
 
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold text-cream mb-4">Get in Touch</h3>
-                    <p className="mb-">
+                    <h3 className="md:text-xl text-lg font-semibold text-cream mb-4">Get in Touch</h3>
+                    <p className="mb-2 md:text-lg text-sm">
                       Have questions or feedback? We'd love to hear from you! Feel free to reach out via phone, email, or visit us in person.
                     </p>
                     <p>
