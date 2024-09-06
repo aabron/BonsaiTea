@@ -6,7 +6,6 @@ import AboutUs from './pages/About';
 import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import Quiz from './pages/Quiz';
-import Order from './pages/Order';
 import Footer from './components/Footer';
 
 
@@ -28,7 +27,6 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/surprise_suggestion" element={<Quiz />} />
-          <Route path="/order" element={<Order />} />
         </Routes>
       
       <Footer />

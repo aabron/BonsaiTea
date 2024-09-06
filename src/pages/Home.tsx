@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const pluginWrapper = () => {
   require('../statics/fullpage.offsetSections.min');

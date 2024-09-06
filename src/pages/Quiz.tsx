@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { questions, recommendations, Question, Recommendation, drinkCategories, DrinkInfo } from '../utils/arrays';
+import { questions, drinkCategories, DrinkInfo } from '../utils/arrays';
 
 const Quiz: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
@@ -15,12 +15,6 @@ const Quiz: React.FC = () => {
       setResult(drinkCategories["Signature Tea"][randomIndex]);
       setShowResult(true);
     }
-  };
-
-  const restartQuiz = () => {
-    setCurrentQuestion(0);
-    setShowResult(false);
-    setResult(null);
   };
 
   return (

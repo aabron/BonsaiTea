@@ -3,20 +3,6 @@ import { drinkCategories } from '../utils/arrays';
 
 const Menu: React.FC = () => {
   const [hoveredDrink, setHoveredDrink] = useState<string | null>(null);
-  const menuImages = [
-    '/images/menu1.jpg',
-    '/images/menu2.jpg',
-    // Add more menu image paths as needed
-  ];
-
-  interface DrinkInfo {
-    name: string;
-    image: string;
-    description: string;
-    tea: string;
-    sugar: string;
-    flavor: string;
-  }
 
   return (
     <section id="menu" className="py-16 px-4 bg-cream">
