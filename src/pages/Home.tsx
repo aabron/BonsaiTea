@@ -481,13 +481,13 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section md:px-4 px-1 mt-16">
+            <div className="section md:px-4 px-1">
               {/* <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1> */}
               <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1">
                 <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
                 {currentAboutSections.map((section) => (
                   section.title === "Our Story" ? (
-                    <div key={section.title} className={`md:space-y-5 space-y-1 text-cream md:text-[16px] text-[8px] ${animationClassAbout}`}>
+                    <div key={section.title} className={`md:space-y-5 space-y-1 md:mt-0 mt-16 text-cream md:text-[16px] text-[8px] ${animationClassAbout}`}>
                       <h1 className="md:text-3xl text-lg font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
                       <p>
                         In 2022, Bonsai Tea began as a small dream shared by a group of friends who wanted to bring the artistry and tranquility of bonsai to the world of tea. Like the careful pruning and nurturing of a bonsai tree, we started small, tending to every detail with patience and love.
