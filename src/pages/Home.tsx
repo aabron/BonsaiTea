@@ -481,7 +481,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section md:px-4 px-1">
+            <div className="section md:px-4 px-1 mt-16">
               {/* <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1> */}
               <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1">
                 <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
@@ -523,8 +523,8 @@ const Home: React.FC = () => {
               </div>
 
               <div className="flex justify-center items-center mt-4">
-                <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentAboutPage === 0 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
-                <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentAboutPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
+                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 0 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
+                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>
             </div>
             <div className="section  ">
