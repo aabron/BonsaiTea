@@ -116,33 +116,6 @@ const teaBlends: DrinkInfo[] = [
     price: "$8.75"
   },
   {
-    name: "THE DRUZE BLEND",
-    image: "/images/bonsaiImages/TheDrizzleBlend.png",
-    description: "Yerba Mate, Lemongrass, verbena",
-    tea: "Yerba Mate",
-    sugar: "Low",
-    flavor: "Herbal, Citrusy",
-    price: "$8.75"
-  },
-  {
-    name: "MOROCCAN MINT",
-    image: "/images/bonsaiImages/MoroccanMint.png",
-    description: "Kumquat Green Tea, Moroccan Mint",
-    tea: "Kumquat Green Tea",
-    sugar: "Low",
-    flavor: "Minty, Citrusy",
-    price: "$8.75"
-  },
-  {
-    name: "ELDERFLOWER OOLONG",
-    image: "/images/bonsaiImages/ElderflowerOolong.png",
-    description: "Oolong Elderflower, Fermented Pear",
-    tea: "Oolong",
-    sugar: "Low",
-    flavor: "Floral, Fruity",
-    price: "$8.75"
-  },
-  {
     name: "BLOOD ORANGE",
     image: "/images/bonsaiImages/BloodOrange.png",
     description: "Rooibos, Saffron, Rose, Orange Peel, Hibiscus",
@@ -170,8 +143,8 @@ const teaBlends: DrinkInfo[] = [
     price: "$8.75"
   },
   {
-    name: "APPLE CRUMBLE",
-    image: "/images/bonsaiImages/AppleCrumble.png",
+    name: "Prosecco",
+    image: "/images/bonsaiImages/Prosecco.png",
     description: "Apple, Pear, Nectarine, Prosecco, Osmanthus, Coconut, Rose",
     tea: "Rooibos",
     sugar: "Low",
@@ -192,7 +165,7 @@ const aboutSections = [
   },
   {
     title: "A Picture of Our Bonsai Tea Troops",
-    image: "/images/bonsaiImages/FullSizeRender.jpg",
+    image: "/images/bonsaiImages/TeamPicture.png",
   }
 ]
 
