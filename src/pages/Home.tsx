@@ -523,8 +523,8 @@ const Home: React.FC = () => {
               </div>
 
               <div className="flex justify-center items-center mt-4">
-                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 0 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
-                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
+                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 0 ? 'md:w-4 md:h-4 w-3 h-3 transition-all duration-300 ease-in-out' : ''}`}></div>
+                <div className={`md:w-3 md:h-3 w-2 h-2 rounded-full mx-2 bg-black ${currentAboutPage === 1 ? 'md:w-4 md:h-4 w-3 h-3 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>
             </div>
             <div className="section  ">

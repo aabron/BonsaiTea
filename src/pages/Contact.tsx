@@ -6,15 +6,13 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-16 px-4 bg-cream">
       <div className="max-w-4xl mx-auto">
-      <img
+        <img
           src="/images/IMG_3806.jpg"
           alt="Bonsai Tea Team"
           className="w-full h-auto rounded-lg mb-8 shadow-lg mt-24"
         />
         <h1 className="text-3xl font-bold text-primary mb-8 text-center">Contact Us</h1>
-        
         <div className="md:p-6 p-3 rounded-lg">
-
           <address className="not-italic mb-6 grid grid-cols-2">
             <div className='flex flex-col justify-center'>
               <h2 className="text-2xl font-semibold text-primary mb-4 mr-4">Visit us at our Winter Park location:</h2>
@@ -28,7 +26,6 @@ const Contact: React.FC = () => {
               </p>
             </div>
             {!isMobile && <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="500" height="350" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>}
-
           </address>
           {isMobile && <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="320" height="350" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>}
           <div className="mt-8">

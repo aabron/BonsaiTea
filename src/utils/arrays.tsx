@@ -103,7 +103,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "BONSAI BLACK",
-      image: "/images/bonsaiImages/BonsaiTea.png",
+      image: "/images/bonsaiImages/BonsaiBlack.png",
       description: "Passion Fruit, Pineapple, Strawberry, Lemon, Jasmine",
       tea: "Jasmine",
       sugar: "Medium",
@@ -314,7 +314,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "MANGO",
-      image: "/images/bonsaiImages/Mango.png",
+      image: "/images/bonsaiImages/MangoMilkTea.png",
       description: "Mango, Mango",
       tea: "None",
       sugar: "None",
@@ -334,7 +334,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
   "Milk Tea": [
     {
       name: "CLASSIC",
-      image: "/images/bonsaiImages/Classic.png",
+      image: "/images/bonsaiImages/ClassicMilkTea.png",
       description: "Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
@@ -370,7 +370,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "STRAWBERRY",
-      image: "/images/bonsaiImages/Strawberry.png",
+      image: "/images/bonsaiImages/StrawberryMilkTea.png",
       description: "Strawberry, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
@@ -379,7 +379,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "COCONUT",
-      image: "/images/bonsaiImages/Coconut.png",
+      image: "/images/bonsaiImages/CoconutMilkTea.png",
       description: "Coconut, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
@@ -388,7 +388,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "HONEYDEW",
-      image: "/images/bonsaiImages/Honeydew.png",
+      image: "/images/bonsaiImages/HoneydewMilkTea.png",
       description: "Honeydew, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
@@ -397,7 +397,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "MANGO",
-      image: "/images/bonsaiImages/Mango.png",
+      image: "/images/bonsaiImages/MangoMilkTea.png",
       description: "Mango, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
@@ -406,7 +406,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "TIGER MILK",
-      image: "/images/bonsaiImages/TigerMilk.png",
+      image: "/images/bonsaiImages/TigerMilkTea.png",
       description: "Brown Sugar, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "High",
@@ -415,7 +415,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "AMARETTO",
-      image: "/images/bonsaiImages/Amaretto.png",
+      image: "/images/bonsaiImages/AmarettoMilkTea.png",
       description: "Roasted Almond, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
