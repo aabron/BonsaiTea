@@ -8,7 +8,6 @@ const Menu: React.FC = () => {
     <section id="menu" className="py-16 md:px-10 px-1 bg-cream">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <h1 className="text-3xl font-bold text-primary mt-16">Our Menu</h1>
-        <h1 className="text-xl font-bold text-primary mt-5">Hover Over or click a drink to see more information</h1>
 
 
         {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

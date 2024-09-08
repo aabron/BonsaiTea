@@ -167,7 +167,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     {
       name: "CHERRY BLOSSOM",
       image: "/images/bonsaiImages/CherryBlossom.png",
-      description: "Strawberry, Avocado, Milk, Earl Grey",
+      description: "Amaretto, Strawberry, Milk, Earl Grey",
       tea: "Earl Grey",
       sugar: "Medium",
       flavor: "Fruity, Creamy",
@@ -176,10 +176,10 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     {
       name: "MANGO TANGO",
       image: "/images/bonsaiImages/MangoTango.png",
-      description: "Mango, Lemon, Kumquat, Chili, Salt, Jasmine",
-      tea: "Jasmine",
+      description: "Mango, Strawberry, Milk, Earl Grey",
+      tea: "Earl Grey",
       sugar: "Low",
-      flavor: "Spicy, Fruity",
+      flavor: "Sweet, Fruity",
       price: "$8.75"
     },
     {
@@ -241,7 +241,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     {
       name: "ROSE GARDEN",
       image: "/images/bonsaiImages/RoseGarden.png",
-      description: "Rose, Lemon, Jasmine",
+      description: "Rose, Strawberry, Jasmine",
       tea: "Jasmine",
       sugar: "Medium",
       flavor: "Floral, Citrusy",
@@ -250,85 +250,11 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     {
       name: "STRAWBERRY BLISS",
       image: "/images/bonsaiImages/StrawberryBliss.png",
-      description: "Strawberry, Jasmine",
+      description: "Strawberry, Lemon, Jasmine",
       tea: "Jasmine",
       sugar: "Medium",
       flavor: "Fruity, Floral",
       price: "$8.50"
-    },
-  ],
-  "Toppings": [
-    {
-      name: "BOBA PEARLS",
-      image: "/images/bonsaiImages/BobaPearls.png",
-      description: "",
-      tea: "",
-      sugar: "None",
-      flavor: "Chewy",
-      price: "$1.00"
-    },
-    {
-      name: "CHEESE FOAM",
-      image: "/images/bonsaiImages/CheeseFoam.png",
-      description: "A creamy, foamy topping made from cheese",
-      tea: "None",
-      sugar: "None",
-      flavor: "Savory, Creamy",
-      price: "$1.00"
-    },
-    {
-      name: "ALOE VERA",
-      image: "/images/bonsaiImages/AloeVera.png",
-      description: "Aloe Vera, Aloe Vera",
-      tea: "None",
-      sugar: "None",
-      flavor: "Refreshing",
-      price: "$1.00"
-    },
-    {
-      name: "KONJAC Boba",
-      image: "/images/bonsaiImages/KonjacBoba.png",
-      description: "Konjac, Konjac",
-      tea: "None",
-      sugar: "None",
-      flavor: "Chewy",
-      price: "$1.00"
-    },
-    {
-      name: "SEASONAL",
-      image: "/images/bonsaiImages/Seasonal.png",
-      description: "A seasonal topping",
-      tea: "None",
-      sugar: "None",
-      flavor: "Varies",
-      price: "$1.00"
-    },
-    {
-      name: "LYCHEE JELLY",
-      image: "/images/bonsaiImages/LycheeJelly.png",
-      description: "Lychee, Lychee",
-      tea: "None",
-      sugar: "None",
-      flavor: "Fruity",
-      price: "$1.00"
-    },
-    {
-      name: "MANGO",
-      image: "/images/bonsaiImages/MangoMilkTea.png",
-      description: "Mango, Mango",
-      tea: "None",
-      sugar: "None",
-      flavor: "Fruity",
-      price: "$1.00"
-    },
-    {
-      name: "STRAWBERRY",
-      image: "/images/bonsaiImages/Strawberry.png",
-      description: "Strawberry, Strawberry",
-      tea: "None",
-      sugar: "None",
-      flavor: "Fruity",
-      price: "$1.00"
     },
   ],
   "Milk Tea": [
@@ -497,35 +423,6 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       sugar: "Low",
       flavor: "Fruity, Floral",
       price: "$8.75"
-    },
-  ],
-  "Coffee": [
-    {
-      name: "POUR OVER",
-      image: "/images/bonsaiImages/PourOver.png",
-      description: "",
-      tea: "Earl Grey",
-      sugar: "None",
-      flavor: "Rich, Bold",
-      price: "$4.99"
-    },
-    {
-      name: "COLD BREW",
-      image: "/images/bonsaiImages/ColdBrew.png",
-      description: "",
-      tea: "Earl Grey",
-      sugar: "None",
-      flavor: "Smooth, Bold",
-      price: "$4.99"
-    },
-    {
-      name: "COFFEE MILK TEA",
-      image: "/images/bonsaiImages/CoffeeMilkTea.png",
-      description: "Coffee, Earl Grey, Milk",
-      tea: "Earl Grey",
-      sugar: "Medium",
-      flavor: "Creamy, Bold",
-      price: "$5.99"
     },
   ],
   "Sparkling Tea": [

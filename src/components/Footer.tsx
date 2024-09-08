@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import {FaInstagram} from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -26,9 +26,7 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaFacebook className='mr-2' />Facebook</a>
             <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaInstagram className='mr-2' />Instagram</a>
-            <a href="#" className="hover:text-gray-300 flex flex-row items-center"><FaTwitter className='mr-2' />Twitter</a>
           </div>
         </div>
       </div>
