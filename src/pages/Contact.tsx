@@ -6,11 +6,6 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-16 px-4 bg-cream">
       <div className="max-w-4xl mx-auto">
-        <img
-          src="/images/IMG_3806.jpg"
-          alt="Bonsai Tea Team"
-          className="w-full h-auto rounded-lg mb-8 shadow-lg mt-24"
-        />
         <h1 className="text-3xl font-bold text-primary mb-8 text-center">Contact Us</h1>
         <div className="md:p-6 p-3 rounded-lg">
           <address className="not-italic mb-6 grid grid-cols-2">

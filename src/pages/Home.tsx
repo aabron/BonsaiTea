@@ -161,25 +161,27 @@ const headerImages = [
 const aboutSections = [
   {
     title: "Our Story",
+    image: "/images/bonsaiImages/TeamPicture.png",
     description: "",
   },
   {
-    title: "A Picture of Our Bonsai Tea Troops",
+    title: "A Picture of Our Bonsai Troops",
     image: "/images/bonsaiImages/TeamPicture.png",
-  }
+    description: "",
+  },
 ]
 
 const Home: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [currentAboutPage, setCurrentAboutPage] = useState(0);
-  const questionsPerPage = isMobile ? 1 : 3;
+  const questionsPerPage = isMobile ? 2 : 3;
   const totalPages = Math.ceil(featuredDrinks.length / questionsPerPage);
   const validCurrentPage = Math.min(Math.max(currentPage, 0), totalPages - 1);
   const startIndex = validCurrentPage * questionsPerPage;
   const endIndex = startIndex + questionsPerPage;
   const [currentTeaPage, setCurrentTeaPage] = useState(0);
-  const questionsPerTeaPage = isMobile ? 1 : 3;
+  const questionsPerTeaPage = isMobile ? 2 : 3;
   const totalTeaPages = Math.ceil(teaBlends.length / questionsPerTeaPage);
   const validCurrentTeaPage = Math.min(Math.max(currentTeaPage, 0), totalTeaPages - 1);
   const teaStartIndex = validCurrentTeaPage * questionsPerTeaPage;
@@ -337,11 +339,11 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="section bg-cream">
-              <h2 className="md:text-4xl text-2xl text-primary mb-2 flex flex-col items-center justify-center px-4">Featured Drinks</h2>
+            <div className="section bg-cream p-24">
+              <h2 className="md:text-5xl text-2xl text-primary mb-2 font-bold flex flex-col items-center justify-center px-4">Featured Drinks</h2>
               <div className={`flex justify-center items-center`}>
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevPage}> {" < "} </button>
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto ${animationClass}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-3 gap-5 max-w-8xl mx-auto ${animationClass}`}>
 
                   {currentDrinks.map((drink) => (
                     <div
@@ -350,7 +352,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[400px] h-[240px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[500px] h-[16rem] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -366,7 +368,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-28 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-64"
+                          className="w-max h-max object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-96"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-xs text-primary">{drink.description}</p>
@@ -396,11 +398,11 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section bg-cream">
-              <h2 className="md:text-4xl text-2xl  text-primary mb-2 text-center">Tea Blends</h2>
+            <div className="section bg-cream p-36">
+              <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center">Tea Blends</h2>
               <div className="flex justify-center items-center">
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ${animationClassTea}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto ${animationClassTea}`}>
                   {currentTeaDrinks.map((drink) => (
                     <div
                       key={drink.name}
@@ -408,7 +410,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[400px] h-[240px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[420px] h-[240px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -424,7 +426,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-28 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-64"
+                          className="w-full h-full object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-80"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-sm text-primary">{drink.description}</p>
@@ -454,14 +456,15 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section md:px-4 px-1">
+            <div className="section md:px-12 px-1">
               {/* <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1> */}
               <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1">
-                <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>
+              { isMobile && <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>}
                 {currentAboutSections.map((section) => (
                   section.title === "Our Story" ? (
-                    <div key={section.title} className={`md:space-y-5 space-y-1 md:mt-0 mt-16 text-cream md:text-[16px] text-[8px] ${animationClassAbout}`}>
+                    <div key={section.title} className={`md:space-y-5 space-y-1 md:mt-0 mt-16 text-cream md:text-[16px] text-[8px] font-bold md:font-normal flex flex-col justify-center items-center ${animationClassAbout}`}>
                       <h1 className="md:text-3xl text-lg font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
+                      {!isMobile && <img src={section.image} alt={section.title} className="rounded-lg mb-2 w-[60%] h-[70%] absolute -z-10 opacity-60" />}
                       <p>
                         In 2022, Bonsai Tea began as a small dream shared by a group of friends who wanted to bring the artistry and tranquility of bonsai to the world of tea. Like the careful pruning and nurturing of a bonsai tree, we started small, tending to every detail with patience and love.
                       </p>
@@ -492,7 +495,7 @@ const Home: React.FC = () => {
                     </div>
                   )
                 ))}
-                <button className="md:ml-10 ml-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextAboutPage}> {" > "} </button>
+                { isMobile && <button className="md:ml-10 ml-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handleNextAboutPage}> {" > "} </button>}
               </div>
 
               <div className="flex justify-center items-center mt-4">
@@ -522,7 +525,7 @@ const Home: React.FC = () => {
                     {isMobile ? (
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="190" height="170" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     ) : (
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="300" height="250" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1986310911143!2d-81.35346818736318!3d28.59381737558449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7712af2be970d%3A0xcdfb5998fe733e74!2sBonsai%20Tea!5e0!3m2!1sen!2sus!4v1725481140466!5m2!1sen!2sus" width="400" height="350" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     )}
                     
 
@@ -545,9 +548,7 @@ const Home: React.FC = () => {
                       For the latest updates and behind-the-scenes content, follow us on social media:
                     </p>
                     <div className="mt-4 flex space-x-4">
-                      <a href="#" className="hover:text-cream flex flex-row items-center"><FaFacebook className='mr-2' />Facebook</a>
-                      <a href="#" className="hover:text-cream flex flex-row items-center"><FaInstagram className='mr-2' />Instagram</a>
-                      <a href="#" className="hover:text-cream flex flex-row items-center"><FaTwitter className='mr-2' />Twitter</a>
+                      <a href="https://www.instagram.com/bonsaiteawinterpark/" className="hover:text-cream flex flex-row items-center"><FaInstagram className='mr-2' />Instagram</a>
                     </div>
                   </div>
                 </div>

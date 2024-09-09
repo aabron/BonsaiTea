@@ -349,7 +349,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       price: "$8.50"
     },
   ],
-  "Caffeinated Tea": [
+  "Tea": [
     {
       name: "CHINA ROSE PETAL",
       image: "/images/bonsaiImages/ChinaRosePetal.png",
@@ -357,15 +357,6 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       tea: "Black Tea",
       sugar: "Low",
       flavor: "Floral, Refreshing",
-      price: "$8.75"
-    },
-    {
-      name: "THE DRIZZLE BLEND",
-      image: "/images/bonsaiImages/TheDrizzleBlend.png",
-      description: "Yerba Mate, Lemongrass, verbena",
-      tea: "Yerba Mate",
-      sugar: "Low",
-      flavor: "Herbal, Citrusy",
       price: "$8.75"
     },
     {
@@ -378,41 +369,12 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       price: "$8.75"
     },
     {
-      name: "ELDERFLOWER OOLONG",
-      image: "/images/bonsaiImages/ElderflowerOolong.png",
-      description: "Oolong Elderflower, Fermented Pear",
-      tea: "Oolong",
-      sugar: "Low",
-      flavor: "Floral, Fruity",
-      price: "$8.75"
-    },
-  ],
-  "Herbal Tea": [
-    {
       name: "BLOOD ORANGE",
       image: "/images/bonsaiImages/BloodOrange.png",
       description: "Rooibos, Saffron, Rose, Orange Peel, Hibiscus",
       tea: "Rooibos",
       sugar: "Low",
       flavor: "Citrusy, Floral",
-      price: "$8.75"
-    },
-    {
-      name: "ROYAL BLACKBERRY",
-      image: "/images/bonsaiImages/RoyalBlackberry.png",
-      description: "Rooibos, Kardadé, Hibiscus, Red Apple, Blackberry",
-      tea: "Rooibos",
-      sugar: "Low",
-      flavor: "Fruity, Floral",
-      price: "$8.75"
-    },
-    {
-      name: "RHUBARB DELIGHT",
-      image: "/images/bonsaiImages/RhubarbDelight.png",
-      description: "Rhubarb, Raspberry, Hibiscus, Apple",
-      tea: "Rooibos",
-      sugar: "Low",
-      flavor: "Fruity, Tangy",
       price: "$8.75"
     },
     {
@@ -456,15 +418,6 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
   ],
   "Slushy": [
     {
-      name: "BONSAI SLUSH",
-      image: "/images/bonsaiImages/BonsaiSlush.png",
-      description: "Passion Fruit, Pineapple, Strawberry, Lemon, Jasmine",
-      tea: "Jasmine",
-      sugar: "Medium",
-      flavor: "Fruity, Floral",
-      price: "$8.75"
-    },
-    {
       name: "MANGO SLUSH",
       image: "/images/bonsaiImages/MangoSlush.png",
       description: "Mango, Lemon, Jasmine",
@@ -495,15 +448,6 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       name: "TARO SLUSH",
       image: "/images/bonsaiImages/TaroMilkTea.png",
       description: "Taro, Earl Grey, Milk",
-      tea: "Earl Grey",
-      sugar: "Medium",
-      flavor: "Nutty, Creamy",
-      price: "$8.75"
-    },
-    {
-      name: "COCONUT SLUSH",
-      image: "/images/bonsaiImages/Coconut.png",
-      description: "Coconut, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
       flavor: "Nutty, Creamy",

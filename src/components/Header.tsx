@@ -19,8 +19,8 @@ const Header: React.FC = () => {
                     <nav className="absolute top-full left-0 bg-white p-6 rounded-lg shadow-lg mt-2 w-[16rem]">
                         <ul className="space-y-4">
                             <li><Link to="/menu" className="text-primary font-bold flex items-center text-xl hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}><IoMenuOutline className='mr-3 text-2xl' />Menu</Link></li>
+                            <li><Link to="/surprise_suggestion" className="text-primary font-bold flex items-center text-xl hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}><IoFastFood className='mr-3 text-2xl' />Tea Blends</Link></li>
                             <li><Link to="/contact" className="text-primary font-bold flex items-center text-xl hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}><FaPhoneAlt className='mr-3 text-2xl' />Contact</Link></li>
-                            <li><Link to="/surprise_suggestion" className="text-primary font-bold flex items-center text-xl hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}><IoFastFood className='mr-3 text-2xl' />Tea Suggestion</Link></li>
                             <li><Link to="/about" className="text-primary font-bold flex items-center text-xl hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}><IoInformationCircleOutline className='mr-3 text-2xl' />About Us</Link></li>
                         </ul>
                     </nav>
