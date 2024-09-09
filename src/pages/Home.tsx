@@ -330,7 +330,7 @@ const Home: React.FC = () => {
                     <img
                       src={image}
                       alt={`Slide ${index + 1}`}
-                      className="md:w-full md:h-full object-cover w-full h-max"
+                      className="md:w-full md:h-full w-full h-max"
                     />
                   </div>
                 ))}
@@ -353,7 +353,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-2 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[500px] h-[240px] border-2 border-black">
+                      <div className="bg-cream p-2 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[500px] h-[220px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -369,7 +369,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-[9rem] object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-96"
+                          className="w-full h-[8rem] object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-96"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-xs text-primary">{drink.description}</p>
@@ -399,11 +399,11 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section bg-cream md:p-36">
+            <div className="section bg-cream md:p-36 py-12 md:py-0">
               <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center">Tea Blends</h2>
               <div className="flex justify-center items-center">
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
-                <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto ${animationClassTea}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 max-w-8xl mx-auto ${animationClassTea}`}>
                   {currentTeaDrinks.map((drink) => (
                     <div
                       key={drink.name}
@@ -411,7 +411,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[420px] h-[270px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[420px] h-[240px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -427,7 +427,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-36 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-80"
+                          className="w-full h-32 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-80"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-sm text-primary">{drink.description}</p>
