@@ -155,8 +155,11 @@ const teaBlends: DrinkInfo[] = [
 ];
 
 const headerImages = [
-  "/images/banner1.jpg",
-  "/images/banner2.jpg",
+  "/images/bonsaiImages/AmarettoMilkTea.png",
+  "/images/bonsaiImages/MangoMilkTea.png",
+  "/images/bonsaiImages/PassionBurst.png",
+  "/images/bonsaiImages/PeachLove&Happiness.png",
+  "/images/bonsaiImages/PinkMatcha.png",
 ]
 
 const aboutSections = [
@@ -324,13 +327,13 @@ const Home: React.FC = () => {
                 {!isMobile ? <div className='absolute'><ReactPlayer url='bonsaiVideo.mp4' playing={true} controls={false} muted={true} loop={true} width='100%' height='100%'/></div> : headerImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`absolute w-full ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    className={`absolute w-full h-[100%] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                       } transition-opacity duration-500`}
                   >
                     <img
                       src={image}
                       alt={`Slide ${index + 1}`}
-                      className="md:w-full md:h-full w-full h-max"
+                      className="md:w-full md:h-full w-full h-full"
                     />
                   </div>
                 ))}
