@@ -46,7 +46,7 @@ const Menu: React.FC = () => {
                           onMouseEnter={() => setHoveredDrink(drink.name)}
                           onMouseLeave={() => setHoveredDrink(null)}
                         >
-                          <div className="bg-cream p-4 rounded-lg shadow-xl relative w-[113px] md:w-full md:h-[540px] h-[240px] border-2 border-black flex flex-col justify-center items-center">
+                          <div className="bg-cream p-4 rounded-lg shadow-xl relative w-[150px] md:w-full md:h-[540px] h-[240px] border-2 border-black flex flex-col justify-center items-center">
                             <div
                               className={`absolute left-0 right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50  ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                                 }`}
