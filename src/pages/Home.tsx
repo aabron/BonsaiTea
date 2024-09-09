@@ -3,6 +3,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { isMobile } from 'react-device-detect';
+import ReactPlayer from 'react-player';
 
 const pluginWrapper = () => {
   require('../statics/fullpage.offsetSections.min');
@@ -320,7 +321,7 @@ const Home: React.FC = () => {
           <ReactFullpage.Wrapper>
             <div className="section bg-cream -z-20" data-percentage={isMobile ? "100" : "100"}>
               <div className='w-full mx-auto flex justify-center items-center'>
-                {headerImages.map((image, index) => (
+                {!isMobile ? <div className='absolute'><ReactPlayer url='bonsaiVideo.mp4' playing={true} controls={false} muted={true} loop={true} width='100%' height='100%'/></div> : headerImages.map((image, index) => (
                   <div
                     key={index}
                     className={`absolute w-full ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
