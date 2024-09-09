@@ -427,7 +427,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-[70%] h-24 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-60"
+                          className="w-[70%] h-24 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-72"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-sm text-primary">{drink.description}</p>
@@ -442,7 +442,7 @@ const Home: React.FC = () => {
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>}
-              <div className='flex justify-between items-center md:mt-10 mt-6 md:px-32 px-4'>
+              <div className='flex justify-between items-center md:mt-1 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
                   className="inline-block bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
