@@ -442,7 +442,7 @@ const Home: React.FC = () => {
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 1 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
                 <div className={`w-3 h-3 rounded-full mx-2 bg-black ${currentTeaPage === 2 ? 'w-4 h-4 transition-all duration-300 ease-in-out' : ''}`}></div>
               </div>}
-              <div className='flex justify-between items-center md:mt-12 mt-6 md:px-32 px-4'>
+              <div className='flex justify-between items-center md:mt-10 mt-6 md:px-32 px-4'>
                 <Link
                   to="/menu"
                   className="inline-block bg-primary text-cream font-bold md:py-3 py-2 md:px-6 px-3 rounded-full hover:bg-secondary transition-colors duration-300 text-center text-lg"
@@ -457,15 +457,15 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section md:px-12 px-1">
+            <div className="section md:px-12 px-1 overflow-hidden ">
               {/* <h1 className="text-3xl font-bold text-cream mb-2 text-center">About Bonsai Tea</h1> */}
-              <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1">
+              <div className="max-w-8xl mx-auto md:px-12 px-1 flex items-center justify-center -mb-1 overflow-hidden">
               { isMobile && <button className="md:mr-10 mr-2 md:mt-0 mt-56 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevAboutPage}> {" < "} </button>}
                 {currentAboutSections.map((section) => (
                   section.title === "Our Story" ? (
-                    <div key={section.title} className={`md:space-y-5 space-y-1 md:mt-0 mt-16 text-cream md:text-[16px] text-[8px] font-bold md:font-normal flex flex-col justify-center items-center ${animationClassAbout}`}>
+                    <div key={section.title} className={`overflow-hidden md:space-y-5 space-y-1 md:mt-0 mt-16 text-cream md:text-[15px] text-[8px] font-bold md:font-normal flex flex-col justify-center items-center ${animationClassAbout}`}>
                       <h1 className="md:text-3xl text-lg font-bold text-cream mb-2 text-center">About Bonsai Tea</h1>
-                      {!isMobile && <img src={section.image} alt={section.title} className="rounded-lg mb-2 w-[60%] h-[70%] absolute -z-10 opacity-60" />}
+                      {!isMobile && <img src={section.image} alt={section.title} className="rounded-lg w-[60%] h-[68%] absolute -z-10 opacity-60 overflow-hidden" />}
                       <p>
                         In 2022, Bonsai Tea began as a small dream shared by a group of friends who wanted to bring the artistry and tranquility of bonsai to the world of tea. Like the careful pruning and nurturing of a bonsai tree, we started small, tending to every detail with patience and love.
                       </p>
@@ -475,8 +475,6 @@ const Home: React.FC = () => {
                       </p>
                       <p>
                         Our team, which we affectionately call the "Bonsai Tea Troops," has grown from a handful of dreamers to a diverse group of passionate individuals. Each member brings their unique flavor to our blend, much like the carefully selected ingredients in our teas. We've celebrated birthdays, comforted each other through losses, and cheered each other on through personal and professional milestones.
-                      </p>
-                      <p>
                         As we've grown, we've remained true to our roots. We still source our ingredients with the same care, craft each drink with the same attention to detail, and greet each customer with the same warmth as we did on day one. Our commitment to quality and community has never wavered.
                       </p>
                       <p>
@@ -506,13 +504,14 @@ const Home: React.FC = () => {
             </div>
             <div className="section  ">
               <div className="max-w-4xl mx-auto mt-12">
-                <h1 className="md:text-3xl text-lg font-bold text-cream text-left p-2">Contact Us</h1>
+                
 
                 <div className=" p-2 rounded-lg">
 
 
                   <address className="not-italic mb-1 grid grid-cols-2 gap-x-2 md:gap-x-0">
                     <div className='flex flex-col justify-center'>
+                    <h1 className="md:text-3xl text-lg font-bold text-cream text-left pb-2">Contact Us</h1>
                       <h2 className="md:text-2xl text-sm font-semibold text-cream md:mb-4 mr-4">Visit us at our Winter Park location:</h2>
                       <p className="md:mb-2 md:text-lg text-sm">519 S Park Ave</p>
                       <p className="md:mb-2 md:text-lg text-sm">Winter Park, FL 32789</p>
