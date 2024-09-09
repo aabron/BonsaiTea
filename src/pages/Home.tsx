@@ -316,7 +316,7 @@ const Home: React.FC = () => {
         pluginWrapper={pluginWrapper}
         render={({ state, fullpageApi }) => (
           <ReactFullpage.Wrapper>
-            <div className="section bg-cream -z-20" data-percentage={isMobile ? "80" : "59"}>
+            <div className="section bg-cream -z-20" data-percentage={isMobile ? "80" : "100"}>
               <div className='w-full mx-auto flex justify-center items-center'>
                 {headerImages.map((image, index) => (
                   <div
