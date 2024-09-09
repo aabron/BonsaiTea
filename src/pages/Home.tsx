@@ -339,7 +339,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="section bg-cream p-24">
+            <div className="section bg-cream md:p-24">
               <h2 className="md:text-5xl text-2xl text-primary mb-2 font-bold flex flex-col items-center justify-center px-4">Featured Drinks</h2>
               <div className={`flex justify-center items-center`}>
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevPage}> {" < "} </button>
@@ -352,7 +352,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[500px] h-[16rem] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[500px] h-[240px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -398,7 +398,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
-            <div className="section bg-cream p-36">
+            <div className="section bg-cream md:p-36">
               <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center">Tea Blends</h2>
               <div className="flex justify-center items-center">
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
@@ -410,7 +410,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[420px] h-[240px] border-2 border-black">
+                      <div className="bg-cream p-4 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[420px] h-[300px] border-2 border-black">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -426,7 +426,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-full h-full object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-80"
+                          className="w-full h-max object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-80"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-sm text-primary">{drink.description}</p>
