@@ -327,7 +327,7 @@ const Home: React.FC = () => {
                 {!isMobile ? <div className='absolute'><ReactPlayer url='bonsaiVideo.mp4' playing={true} controls={false} muted={true} loop={true} width='100%' height='100%'/></div> : headerImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`absolute w-full h-[100%] ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    className={`absolute w-full h-[92%] mt-28 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                       } transition-opacity duration-500`}
                   >
                     <img
