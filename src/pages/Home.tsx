@@ -344,7 +344,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="section bg-cream md:p-20">
-              <h2 className="md:text-5xl text-2xl text-primary mb-2 font-bold flex flex-col items-center justify-center px-4">Featured Drinks</h2>
+              <h2 className="md:text-5xl text-2xl text-primary mb-2 font-bold flex flex-col items-center justify-center px-4 md:mt-12">Featured Drinks</h2>
               <div className={`flex justify-center items-center`}>
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevPage}> {" < "} </button>
                 <div className={`grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-2 max-w-8xl mx-auto ${animationClass}`}>
@@ -403,7 +403,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="section bg-cream md:p-28 md:py-0">
-            <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center md:mt-12">Tea Blends</h2>
+            <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center md:mt-16">Tea Blends</h2>
               <div className="flex justify-center items-center md:mt-12 mt-1">
               
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
