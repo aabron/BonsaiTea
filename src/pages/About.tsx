@@ -6,7 +6,7 @@ const AboutUs: React.FC = () => {
             <div className="max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-primary mb-8 text-center">About Bonsai Tea</h1>
                 <img
-                    src="/images/bonsaiImages/FullSizeRender.jpg"
+                    src="/images/bonsaiImages/FullSizeRender.png"
                     alt="Bonsai Tea Team"
                     className="w-full h-auto rounded-lg mb-8 shadow-lg"
                 />

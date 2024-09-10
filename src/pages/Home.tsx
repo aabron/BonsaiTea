@@ -127,7 +127,7 @@ const teaBlends: DrinkInfo[] = [
   },
   {
     name: "Butterfly Pea Flower",
-    image: "/images/bonsaiImages/ButterFlyPeaFlower.png",
+    image: "/images/bonsaiImages/ButterflyPeaFlower.png",
     description: "Rooibos, Kardadé, Hibiscus, Red Apple, Blackberry",
     tea: "Rooibos",
     sugar: "Low",
