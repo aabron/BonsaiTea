@@ -403,7 +403,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="section bg-cream md:p-28 md:py-0">
-            <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center md:mt-0 mt-24">Tea Blends</h2>
+            <h2 className="md:text-5xl text-2xl font-bold text-primary mb-2 text-center md:mt-12 mt-16">Tea Blends</h2>
               <div className="flex justify-center items-center md:mt-12 mt-1">
               
                 <button className="ml-12 text-2xl px-2 py-5 border-2 bg-primary text-white rounded-xl hover:scale-105 duration-300 ease-in-out transition-all" onClick={handlePrevTeaPage}> {" < "} </button>
