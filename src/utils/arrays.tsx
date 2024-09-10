@@ -314,7 +314,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "HONEYDEW",
-      image: "/images/bonsaiImages/HoneydewMilkTea.png",
+      image: "/images/bonsaiImages/HoneyDewMilkTea.png",
       description: "Honeydew, Earl Grey, Milk",
       tea: "Earl Grey",
       sugar: "Medium",
