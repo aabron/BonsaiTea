@@ -360,15 +360,6 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
       price: "$8.75"
     },
     {
-      name: "MOROCCAN MINT",
-      image: "/images/bonsaiImages/MoroccanMint.png",
-      description: "Kumquat Green Tea, Moroccan Mint",
-      tea: "Kumquat Green Tea",
-      sugar: "Low",
-      flavor: "Minty, Citrusy",
-      price: "$8.75"
-    },
-    {
       name: "BLOOD ORANGE",
       image: "/images/bonsaiImages/BloodOrange.png",
       description: "Rooibos, Saffron, Rose, Orange Peel, Hibiscus",
@@ -390,7 +381,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
   "Sparkling Tea": [
     {
       name: "LYSERØD",
-      image: "/images/bonsaiImages/Lyserod.png",
+      image: "/images/bonsaiImages/Lyserod.jpg",
       description: "Silver Needle, Oolong, Hibiscus",
       tea: "Oolong",
       sugar: "Low",
@@ -399,7 +390,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "BLÅ",
-      image: "/images/bonsaiImages/Bla.png",
+      image: "/images/bonsaiImages/Bla.jpg",
       description: "Jasmine, White Tea, Darjeeling",
       tea: "White Tea",
       sugar: "Low",
@@ -408,7 +399,7 @@ export const drinkCategories: { [key: string]: DrinkInfo[] } = {
     },
     {
       name: "LYSEGRØN",
-      image: "/images/bonsaiImages/Lysegron.png",
+      image: "/images/bonsaiImages/Lysegron.jpg",
       description: "Sencha, Green Tea, Orange Peel",
       tea: "Sencha",
       sugar: "Low",
