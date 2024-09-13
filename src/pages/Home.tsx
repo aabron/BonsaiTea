@@ -324,7 +324,7 @@ const Home: React.FC = () => {
           <ReactFullpage.Wrapper>
             <div className="section bg-cream -z-20" data-percentage={isMobile ? "100" : "100"}>
               <div className='w-full mx-auto flex justify-center items-center'>
-                {!isMobile ? <div className='absolute'><ReactPlayer url='bonsaiVideo.mp4' playing={true} controls={false} muted={true} loop={true} width='100%' height='100%'/></div> : headerImages.map((image, index) => (
+                {!isMobile ? <div className='absolute'><ReactPlayer url='images/bonsaiImages/bonsaiVideo.mp4' playing={true} controls={false} muted={true} loop={true} width='100%' height='100%'/></div> : headerImages.map((image, index) => (
                   <div
                     key={index}
                     className={`absolute w-full h-[92%] mt-28 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
@@ -337,7 +337,7 @@ const Home: React.FC = () => {
                     />
                   </div>
                 ))}
-                <div className="bg-black bg-opacity-70 p-8 rounded-lg z-20 mx-12 md:mt-0 mt-8">
+                <div className="bg-black bg-opacity-70 p-8 rounded-lg z-20 mx-12 md:mt-96 mt-8">
                   <h1 className="md:text-5xl text-2xl text-cream mb-4">Welcome to Bonsai Tea</h1>
                   <p className="md:text-2xl text-lg text-cream">Discover the art of tea in Winter Park, Florida</p>
                 </div>
