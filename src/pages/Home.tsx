@@ -415,7 +415,7 @@ const Home: React.FC = () => {
                       onMouseEnter={() => setHoveredDrink(drink.name)}
                       onMouseLeave={() => setHoveredDrink(null)}
                     >
-                      <div className="bg-cream p-2 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[75%] h-[200px] border-2 border-black flex flex-col justify-center items-center">
+                      <div className="bg-cream p-2 rounded-lg shadow-lg relative w-[180px] md:w-full md:h-[80%] h-[200px] border-2 border-black flex flex-col justify-center items-center">
                         <div
                           className={`w-[250px] max-w-full left-[50%] absolute right-0 bottom-full mb-2 bg-cream p-4 rounded-lg shadow-lg text-primary transition-all duration-300 ease-in-out z-50 ${hoveredDrink === drink.name ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'
                             }`}
@@ -431,7 +431,7 @@ const Home: React.FC = () => {
                         <img
                           src={drink.image}
                           alt={drink.name}
-                          className="w-[70%] h-24 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:h-[70%]"
+                          className="w-[70%] h-24 object-cover rounded-lg md:mb-4 mb-1 md:w-full md:max-w-[400px] md:h-[81%]"
                         />
                         <h3 className="md:text-xl text-sm font-bold text-primary md:mb-2 mb-2">{drink.name}</h3>
                         <p className="md:text-sm text-sm text-primary">{drink.description}</p>
