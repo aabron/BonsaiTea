@@ -203,7 +203,7 @@ const Home: React.FC = () => {
   const [animationClassTea, setAnimationClassTea] = useState('');
   const [animationClassAbout, setAnimationClassAbout] = useState('');
 
-  console.log(currentPage)
+  //console.log(currentPage)
 
   React.useEffect(() => {
     setAnimationClass('');
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
       // setAnimationClass('fade-in');
     }, 400);
   };
-  console.log(animationClass)
+  //console.log(animationClass)
 
   const handlePrevPage = () => {
     setAnimationClass('fade-out');
@@ -245,7 +245,7 @@ const Home: React.FC = () => {
       // setAnimationClass('fade-in');
     }, 400);
   };
-  console.log(animationClass)
+  //console.log(animationClass)
 
   const handlePrevTeaPage = () => {
     setAnimationClassTea('fade-out-tea');
@@ -270,7 +270,7 @@ const Home: React.FC = () => {
       // setAnimationClass('fade-in');
     }, 400);
   };
-  console.log(animationClass)
+  //console.log(animationClass)
 
   const handlePrevAboutPage = () => {
     setAnimationClassAbout('fade-out-about');
